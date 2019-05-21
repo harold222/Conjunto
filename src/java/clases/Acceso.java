@@ -1,0 +1,139 @@
+/*
+ * Esta clase
+ */
+
+package clases;
+
+import java.sql.*;
+import java.util.LinkedList;
+
+/**
+ *
+ * @author Harold Pedraza
+ */
+
+public class Acceso {
+    
+    Database db = new Database();
+    String sql= "";
+    Connection con;
+    PreparedStatement pst;
+    ResultSet rs;
+    
+    public Acceso(){
+        
+    }
+    
+    public int validar(String identificacion,String contra){ //retorna int por el tipo de usuario
+        int nivel =0;
+        try {
+            Class.forName(db.getDriver());
+            con = DriverManager.getConnection(db.getUrl(), db.getUser(), db.getContra());
+            sql ="SELECT nivel FROM persona WHERE identificacion='" + identificacion + "' AND clave='" + contra + "';";
+            pst = con.prepareStatement(sql);//define lo que se ejecutara
+            rs = pst.executeQuery(); //ejecuto la consulta
+            
+            while(rs.next()){
+                nivel = rs.getInt(1);
+            }
+            
+            con.close(); //me desconecto
+            rs.close(); //salgo del contenido del resultSet
+            
+            return nivel; // retorno el nivel de la persona que se logueo
+        } catch (SQLException | ClassNotFoundException e) {//por si no se ejecuta el sql o no se encuentra el diver 
+            return nivel; //los niveles 0 significan que los usuarios no existen
+        }
+    }
+    
+    public String obtenerNombre(String identificacion,String contra){
+        String nombre = null;
+        try {
+            Class.forName(db.getDriver());
+            con = DriverManager.getConnection(db.getUrl(), db.getUser(), db.getContra());
+            sql ="SELECT nombre FROM persona WHERE identificacion='" + identificacion + "' AND clave='" + contra + "';";
+            pst = con.prepareStatement(sql);//define lo que se ejecutara
+            rs = pst.executeQuery(); //ejecuto la consulta
+            
+            while(rs.next()){
+                nombre = rs.getString(1);
+            }
+            
+            con.close(); //me desconecto
+            rs.close(); //salgo del contenido del resultSet
+            
+            return nombre; // retorno el nivel de la persona que se logueo
+        } catch (SQLException | ClassNotFoundException e) {//por si no se ejecuta el sql o no se encuentra el diver 
+            return nombre; //los niveles 0 significan que los usuarios no existen
+        }
+    }
+    
+    public String obtenerCorreo(String identificacion,String contra){
+        String correo = null;
+        try {
+            Class.forName(db.getDriver());
+            con = DriverManager.getConnection(db.getUrl(), db.getUser(), db.getContra());
+            sql ="SELECT correoElectronico FROM persona WHERE identificacion='" + identificacion + "' AND clave='" + contra + "';";
+            pst = con.prepareStatement(sql);//define lo que se ejecutara
+            rs = pst.executeQuery(); //ejecuto la consulta
+            
+            while(rs.next()){
+                correo = rs.getString(1);
+            }
+            
+            con.close(); //me desconecto
+            rs.close(); //salgo del contenido del resultSet
+            
+            return correo; // retorno el nivel de la persona que se logueo
+        } catch (SQLException | ClassNotFoundException e) {//por si no se ejecuta el sql o no se encuentra el diver 
+            return correo; //los niveles 0 significan que los usuarios no existen
+        }
+    }
+    
+    public boolean registro(String identi,String nom, String ape,String correo, String cel,String tel, String pass){
+        try {
+            Class.forName(db.getDriver());
+            con = DriverManager.getConnection(db.getUrl(), db.getUser(), db.getContra());
+            sql ="INSERT INTO persona (identificacion,nombre,apellido,correoElectronico,celular,telefono,clave,nivel) VALUES ('" +identi+"', '"+nom+"', '"+ape+"', '"+correo+"', '"+cel+"' ,'"+tel+"', '"+pass+"', 2);";                                                                  
+            pst = con.prepareStatement(sql);//define lo que se ejecutara
+            //rs = pst.executeQuery(); //ejecuto la consulta
+            pst.executeUpdate();         
+            con.close(); //me desconecto
+            rs.close(); //salgo del contenido del resultSet
+
+            return true;
+        } catch (SQLException | ClassNotFoundException e) {//por si no se ejecuta el sql o no se encuentra el diver 
+            return false;
+        }
+    }
+    
+    public static LinkedList<FormularioEmpresadeVigilancia> FormularioEmpresaVigi(){
+        
+        LinkedList<FormularioEmpresadeVigilancia> listaContactos=new LinkedList<FormularioEmpresadeVigilancia>();
+        try{
+         Class.forName("com.mysql.jdbc.Driver");
+         Connection conexion = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/ingsoftware", "root", "");
+         Statement st = conexion.createStatement();
+         ResultSet rs = st.executeQuery("SELECT * FROM EmpresaVigilancia;" );
+         
+         while (rs.next()){
+            FormularioEmpresadeVigilancia op = new FormularioEmpresadeVigilancia();
+            op.setNitempresa(rs.getInt("NitEmpresa"));
+            op.setRazonsocial(rs.getString("razonSocial"));
+            op.setDireccion(rs.getString("direccion"));
+            op.setNumerotelefonico(rs.getString("numeroTelefonico"));
+            op.setCelular(rs.getString("celular"));
+            op.setEstadoServicio(rs.getBoolean("EstadoServicio"));
+            listaContactos.add(op);
+         }
+         rs.close();
+         st.close();
+         conexion.close();
+      }
+      catch (Exception e){
+         e.printStackTrace();
+      }
+      return listaContactos;
+    }
+}
