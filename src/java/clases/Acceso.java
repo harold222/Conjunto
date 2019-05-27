@@ -136,4 +136,59 @@ public class Acceso {
       }
       return listaContactos;
     }
+   
+    public static LinkedList<FormularioEmpresadeAseo> FormularioEmpresaAs(){
+        
+        LinkedList<FormularioEmpresadeAseo> listaContacto=new LinkedList<FormularioEmpresadeAseo>();
+        
+        try{
+         Class.forName("com.mysql.jdbc.Driver");
+         Connection conexion = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/ingsoftware", "root", "");
+         Statement st = conexion.createStatement();
+         ResultSet rs = st.executeQuery("SELECT * FROM EmpresaAseo;" );
+         
+         while (rs.next()){
+            FormularioEmpresadeAseo op = new FormularioEmpresadeAseo();
+            op.setNitempresa(rs.getInt("NitEmpresa"));
+            op.setRazonsocial(rs.getString("razonSocial"));
+            op.setDireccion(rs.getString("direccion"));
+            op.setNumerotelefonico(rs.getString("numeroTelefonico"));
+            op.setCelular(rs.getString("celular"));
+            op.setEstadoServicio(rs.getBoolean("EstadoServicio"));
+            listaContacto.add(op);
+         }
+         rs.close();
+         st.close();
+         conexion.close();
+      }
+      catch (Exception e){
+         e.printStackTrace();
+      }
+      return listaContacto;
+    }
+    
+    public int auto_increm(String sql) {
+        int id = 1;
+        
+        try{   
+            Class.forName(db.getDriver());
+            con = DriverManager.getConnection(db.getUrl(), db.getUser(), db.getContra());
+            pst = con.prepareStatement(sql);//define lo que se ejecutara
+            rs = pst.executeQuery(); //ejecuto la consulta
+                while(rs.next()){
+                    id = rs.getInt(1)+1;
+                }
+        }catch(Exception ex){
+            System.out.println("idmaximo"+ex.getMessage());
+            id = 1;
+        }
+        finally{
+            try{
+                pst.close();
+                rs.close();
+            }catch(Exception ex){}
+        }
+        return id;
+    }
 }

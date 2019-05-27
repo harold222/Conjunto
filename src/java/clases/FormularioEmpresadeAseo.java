@@ -1,7 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package clases;
 
-public class FormularioEmpresadeVigilancia {
-    
+/**
+ *
+ * @author Harold Pedraza
+ */
+
+public class FormularioEmpresadeAseo {
     int nitempresa;
     String razonsocial;
     String direccion;
@@ -9,10 +18,10 @@ public class FormularioEmpresadeVigilancia {
     String celular;
     Boolean estadoServicio;
 
-    public FormularioEmpresadeVigilancia() {
+    public FormularioEmpresadeAseo() {
     }
 
-    public FormularioEmpresadeVigilancia(int nitempresa, String razonsocial, String direccion, String numerotelefonico, String celular, Boolean estadoServicio) {
+    public FormularioEmpresadeAseo(int nitempresa, String razonsocial, String direccion, String numerotelefonico, String celular, Boolean estadoServicio) {
         this.nitempresa = nitempresa;
         this.razonsocial = razonsocial;
         this.direccion = direccion;
@@ -21,8 +30,6 @@ public class FormularioEmpresadeVigilancia {
         this.estadoServicio = estadoServicio;
     }
 
-    
-    
     public int getNitempresa() {
         return nitempresa;
     }

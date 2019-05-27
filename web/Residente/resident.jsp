@@ -47,19 +47,19 @@
                 
                 <a style="color: blue" href="#" >Inicio</a><br>
                 <div class="dropdown-divider"></div>
-                <a style="color: blue" href="#" >Noticias</a><br>
+                <a style="color: blue" href="requerimientos/Noticia.jsp" >Noticias</a><br>
                 <div class="dropdown-divider"></div>
-                <a style="color: blue" href="#" >Eventos</a><br>
+                <a style="color: blue" href="requerimientos/Evento.jsp" >Eventos</a><br>
                 <div class="dropdown-divider"></div>
                 <a style="color: blue" href="#" >Enviar correo</a><br>
                 <div class="dropdown-divider"></div>
                 <a style="color: blue" href="#" >Salon comunal</a><br>
                 <div class="dropdown-divider"></div>
-                <a style="color: blue" href="#" >Informes</a><br>
+                <a style="color: blue" href="requerimientos/Informes.jsp" >Informes</a><br>
                 <div class="dropdown-divider"></div>
-                <a style="color: blue" href="#" >Cartelera social</a><br>
+                <a style="color: blue" href="requerimientos/CarteleraSocial.jsp">Cartelera social</a><br>
                 <div class="dropdown-divider"></div>
-                <a style="color: blue" href="#">Empresa de Aseo</a><br>
+                <a style="color: blue" href="requerimientos/EmpresaAseo.jsp">Empresa de Aseo</a><br>
                 <div class="dropdown-divider"></div>
                 <a style="color: blue" href="requerimientos/EmpresaVigilancia.jsp" >Empresa de Vigilancia</a><br>
 
@@ -76,7 +76,7 @@
                     <div class="dropdown-divider">
                         
                     </div>
-                    <a style="color: black" href="../index.jsp?cerrar=true" class="dropdown-item">Actualizar datos</a>
+                    <a style="color: black" href="requerimientos/ActualizarPerfil.jsp?id=<%= sesion.getAttribute("identificacion")%>" class="dropdown-item">Actualizar datos</a>
                     <a style="color: black" href="../index.jsp?cerrar=true" class="dropdown-item">Salir</a>
                 </div>
                 

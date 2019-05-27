@@ -36,10 +36,10 @@
     </style>
     
     <br>
-    <h3 class="heading">Formulario Empresa de Vigilancia: </h3>
+    <h3 class="heading">Trabajadores existentes en la Empresa de Aseo: </h3>
     <hr>
     
-    <body background="../../Recursos/img/7.jpg" >
+    <body background="../../Recursos/img/8.jpg" >
         
         <%
             Connection con;
@@ -51,11 +51,12 @@
             con = DriverManager.getConnection(url, user, clave);
             PreparedStatement ps;
             //Emnpezamos Listando los Datos de la Tabla Usuario
+            int nit=Integer.parseInt(request.getParameter("NitEmpresa"));
             Statement smt;
             ResultSet rs;
             smt = con.createStatement();
-            rs = smt.executeQuery("select * from empresavigilancia");
-             
+            rs = smt.executeQuery("SELECT nitempresa,cedula,nombre,apellido,direcciones,telefono,celulares,estado FROM EmpresaVigilancia INNER JOIN TrabajadorEmpresaVigilancia ON EmpresaVigilancia.nitempresa = TrabajadorEmpresaVigilancia.NitDeEmpresa WHERE NitEmpresa ="+nit+";");
+        
         %>
         
         <div >
@@ -64,9 +65,11 @@
             <table  class="table table-striped">
                 <tr>
                     <th scope="col">Nit Empresa: </th>
-                    <th scope="col">Razon Social: </th>
-                    <th scope="col">Direccion: </th>
-                    <th scope="col">Numero Telefonico</th>
+                    <th scope="col">Cedula: </th>
+                    <th scope="col">Nombre: </th>
+                    <th scope="col">Apellido: </th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Telefono: </th>
                     <th scope="col">Celular: </th>
                     <th scope="col">Estado de Servicio: </th>
                     <th scope="col">Acciones: </th>
@@ -76,14 +79,16 @@
                 
                 <tr>
                     <th scope="row"> <%= rs.getInt("NitEmpresa")%> </th>
-                    <th scope="row"> <%= rs.getString("razonSocial")%> </th>
-                    <th scope="row"> <%= rs.getString("direccion")%> </th>
-                    <th scope="row"> <%= rs.getString("numeroTelefonico")%> </th>
-                    <th scope="row"> <%= rs.getString("celular")%> </th>
-                    <th scope="row"> <%= rs.getBoolean("EstadoServicio")%> </th>
+                    <th scope="row"> <%= rs.getInt("cedula")%> </th>
+                    <th scope="row"> <%= rs.getString("nombre")%> </th>
+                    <th scope="row"> <%= rs.getString("apellido")%> </th>
+                    <th scope="row"> <%= rs.getString("direcciones")%> </th>
+                    <th scope="row"> <%= rs.getString("telefono")%> </th>
+                    <th scope="row"> <%= rs.getString("celulares")%> </th>
+                    <th scope="row"> <%= rs.getBoolean("estado")%> </th>
                     
                     <th scope="row">
-                        <a class="btn btn-warning btn-sm" href="TrabajadoresEmpresaVigi.jsp?NitEmpresa=<%= rs.getInt("NitEmpresa")%>">Trabajadores Existentes</a>
+                        <a class="btn btn-warning btn-sm" href="EmpresaVigilancia.jsp">Devolver</a>
                     </th>                  
                 </tr>
                 <% }%>
@@ -92,4 +97,7 @@
         </div>
     </body>
 </html>
+
+
+
 

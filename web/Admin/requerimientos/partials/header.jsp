@@ -9,9 +9,6 @@
 
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f" %>
 <%@ taglib uri="http://java.sun.com/jsf/html" prefix="h" %>
-
-<!-- RichFaces tag library declaration -->
-
 <%@ taglib uri="http://richfaces.org/a4j" prefix="a4j"%>
 <%@ taglib uri="http://richfaces.org/rich" prefix="rich"%>
 
@@ -33,6 +30,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
         <link href="../../Recursos/css/estilos.css" rel="stylesheet" type="text/css"/>
         <title>Software Conjunto</title>
     </head>
@@ -44,7 +42,7 @@
             <a style="color: white" class="nav-link dropdown-toggle" data-toggle="dropdown">Software Conjunto</a>
                 
             <div class="dropdown-menu text-center">
-                <a style="color: blue" href="../resident.jsp" >Inicio</a><br>
+                <a style="color: blue" href="../admin.jsp" >Inicio</a><br>
                 <div class="dropdown-divider"></div>
                 <a style="color: blue" href="Noticia.jsp" >Noticias</a><br>
                 <div class="dropdown-divider"></div>
@@ -56,9 +54,9 @@
                 <div class="dropdown-divider"></div>
                 <a style="color: blue" href="Informes.jsp" >Informes</a><br>
                 <div class="dropdown-divider"></div>
-                <a style="color: blue" href="CarteleraSocial.jsp">Cartelera social</a><br>
+                <a style="color: blue" href="CarteleraSocial.jsp" >Cartelera social</a><br>
                 <div class="dropdown-divider"></div>
-                <a style="color: blue" href="EmpresaAseo.jsp">Empresa de Aseo</a><br>
+                <a style="color: blue" href=EmpresaAseo.jsp>Empresa de Aseo</a><br>
                 <div class="dropdown-divider"></div>
                 <a style="color: blue" href="EmpresaVigilancia.jsp" >Empresa de Vigilancia</a><br>
 
@@ -68,10 +66,10 @@
                 <a style="color: white" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cerrar Sesion</a>
                 
                 <div class="dropdown-menu text-center">
-                    <a><img src="../../Recursos/img/4.png" height="100" width="80"/></a><br>
+                    <a><img src="../../Recursos/img/3.png" height="100" width="80"/></a><br>
                     <a><%= sesion.getAttribute("nombre")%> </a><br>
                     <a><%= sesion.getAttribute("correo")%> </a><br>
-                    <a>Residente nivel 2</a>
+                    <a>Administrador nivel 1</a>
                     <div class="dropdown-divider">
                         
                     </div>

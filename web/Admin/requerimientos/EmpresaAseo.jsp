@@ -36,10 +36,10 @@
     </style>
     
     <br>
-    <h3 class="heading">Formulario Empresa de Vigilancia: </h3>
+    <h3 class="heading">Formulario Empresa de Aseo: </h3>
     <hr>
     
-    <body background="../../Recursos/img/7.jpg" >
+    <body background="../../Recursos/img/8.jpg" >
         
         <%
             Connection con;
@@ -54,7 +54,7 @@
             Statement smt;
             ResultSet rs;
             smt = con.createStatement();
-            rs = smt.executeQuery("select * from empresavigilancia");
+            rs = smt.executeQuery("select * from empresaAseo");
              
         %>
         
@@ -83,7 +83,8 @@
                     <th scope="row"> <%= rs.getBoolean("EstadoServicio")%> </th>
                     
                     <th scope="row">
-                        <a class="btn btn-warning btn-sm" href="TrabajadoresEmpresaVigi.jsp?NitEmpresa=<%= rs.getInt("NitEmpresa")%>">Trabajadores Existentes</a>
+                        <a class="btn btn-warning btn-sm" href="ActualizarEmpresaAseo.jsp?NitEmpresa=<%= rs.getInt("NitEmpresa")%>">Actualizar datos</a>
+                        <a class="btn btn-warning btn-sm" href="TrabajadoresEmpresaAseo.jsp?NitEmpresa=<%= rs.getInt("NitEmpresa")%>">Trabajadores Existentes</a>
                     </th>                  
                 </tr>
                 <% }%>

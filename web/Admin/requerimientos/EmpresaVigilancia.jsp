@@ -83,6 +83,7 @@
                     <th scope="row"> <%= rs.getBoolean("EstadoServicio")%> </th>
                     
                     <th scope="row">
+                        <a class="btn btn-warning btn-sm" href="ActualizarEmpresaVigilancia.jsp?NitEmpresa=<%= rs.getInt("NitEmpresa")%>">Actualizar datos</a>
                         <a class="btn btn-warning btn-sm" href="TrabajadoresEmpresaVigi.jsp?NitEmpresa=<%= rs.getInt("NitEmpresa")%>">Trabajadores Existentes</a>
                     </th>                  
                 </tr>
@@ -92,4 +93,3 @@
         </div>
     </body>
 </html>
-

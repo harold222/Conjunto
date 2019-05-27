@@ -23,7 +23,7 @@
     </jsp:include>
     <style>
         .heading { 
-            color: #CA4F24;
+            color: #000000;
             font-size: 200%;
             font-weight: bold;
             letter-spacing: 10px;
@@ -36,10 +36,10 @@
     </style>
     
     <br>
-    <h3 class="heading">Formulario Empresa de Vigilancia: </h3>
+    <h3 class="heading">Noticias del conjunto: </h3>
     <hr>
     
-    <body background="../../Recursos/img/7.jpg" >
+    <body background="../../Recursos/img/13.jpg" >
         
         <%
             Connection con;
@@ -54,42 +54,26 @@
             Statement smt;
             ResultSet rs;
             smt = con.createStatement();
-            rs = smt.executeQuery("select * from empresavigilancia");
+            rs = smt.executeQuery("select * from Noticia");
              
         %>
         
         <div >
             
-          
-            <table  class="table table-striped">
-                <tr>
-                    <th scope="col">Nit Empresa: </th>
-                    <th scope="col">Razon Social: </th>
-                    <th scope="col">Direccion: </th>
-                    <th scope="col">Numero Telefonico</th>
-                    <th scope="col">Celular: </th>
-                    <th scope="col">Estado de Servicio: </th>
-                    <th scope="col">Acciones: </th>
-                </tr>
+            <table class="table table-striped">
+                
                   
                 <% while(rs.next()){ %>
                 
-                <tr>
-                    <th scope="row"> <%= rs.getInt("NitEmpresa")%> </th>
-                    <th scope="row"> <%= rs.getString("razonSocial")%> </th>
-                    <th scope="row"> <%= rs.getString("direccion")%> </th>
-                    <th scope="row"> <%= rs.getString("numeroTelefonico")%> </th>
-                    <th scope="row"> <%= rs.getString("celular")%> </th>
-                    <th scope="row"> <%= rs.getBoolean("EstadoServicio")%> </th>
-                    
-                    <th scope="row">
-                        <a class="btn btn-warning btn-sm" href="TrabajadoresEmpresaVigi.jsp?NitEmpresa=<%= rs.getInt("NitEmpresa")%>">Trabajadores Existentes</a>
-                    </th>                  
+                <tr >
+                    <th scope="row"> <%= rs.getString("NombreNoticia")%> </th>
+                    <th scope="row"> <%= rs.getString("ContenidoNoticia")%> </th>
+                                      
                 </tr>
+                
                 <% }%>
                 
             </table>
         </div>
     </body>
 </html>
-
