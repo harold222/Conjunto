@@ -7,7 +7,7 @@ CREATE TABLE persona (
 	identificacion VARCHAR(20),
 	nombre VARCHAR(25),
 	apellido VARCHAR(25),
-	correoElectronico VARCHAR(25),
+	correoElectronico VARCHAR(50),
 	celular VARCHAR(15),
 	telefono VARCHAR(15),
 	clave VARCHAR(25),
@@ -16,9 +16,9 @@ CREATE TABLE persona (
 
 
 INSERT INTO persona(identificacion,nombre,apellido,correoElectronico,celular,telefono,clave,nivel) VALUES (
-	'1073526483','Luis','Reyes','luisre@gmail.com','3134157489','8233408','12345',1);
+	'1073526483','Luis','Reyes','t1harole@gmail.com','3134157489','8233408','12345',1);
 INSERT INTO persona(identificacion,nombre,apellido,correoElectronico,celular,telefono,clave,nivel) VALUES (
-	'79400790','Juan','Vargas','Juanvar@gmail.com','3185478974','8745179','12345',2);
+	'79400790','Juan','Vargas','aprendiendodelelohim@gmail.com','3185478974','8745179','12345',2);
 
 -----------------------------------------------------------------------------------------------------------
 

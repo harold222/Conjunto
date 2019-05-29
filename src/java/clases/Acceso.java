@@ -1,6 +1,6 @@
 /*
- * Esta clase
- */
+ * Esta clase sera la encargada de ejecutar las respectivas consultas o procesos que hacen uso de la base de datos
+*/
 
 package clases;
 
@@ -8,8 +8,8 @@ import java.sql.*;
 import java.util.LinkedList;
 
 /**
- *
  * @author Harold Pedraza
+ * date: 29/05/2019
  */
 
 public class Acceso {

@@ -1,5 +1,5 @@
 /*
- * Dentro de esta clase
+ * Dentro de esta clase activare las sesiones correspondientes a cada nivel del usuario a ingresar
  */
 
 package servlets;
@@ -14,8 +14,8 @@ import javax.servlet.RequestDispatcher;
 import clases.Acceso;
 
 /**
- *
  * @author Harold Pedraza
+ * date 29/05/2019
  */
 
 public class SERVLOGIN extends HttpServlet {

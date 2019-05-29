@@ -1,12 +1,12 @@
 /*
- * En esta clase
+ * Esta clase se encargar de administrar la conexion a la base de datos
  */
 
 package clases;
 
 /**
- *
- * @author HarolD
+ * @author Harold Pedraza
+ * date: 29/05/2019
  */
 
 public class Database {
