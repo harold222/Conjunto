@@ -2,6 +2,10 @@ package VO;
 
 import java.io.InputStream;
 
+/**
+ * @author Veronica Quinto
+ * cc: 1073528535
+ */
 public class PdfVO {
 
     /*Todo los atributos*/

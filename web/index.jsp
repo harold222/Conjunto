@@ -1,11 +1,3 @@
-<%-- 
-    Document   : Index
-    Created on : 28-may-2019, 22:48:11
-    Author     : Harold Pedraza
-    Esta pagina sera la uqe me identifique el tipo de usuario a ingresar dependiendo de su nivel,
-    se cargaran sus respectivas vistas.
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true" %>
     "http://www.w3.org/TR/html4/loose.dtd">

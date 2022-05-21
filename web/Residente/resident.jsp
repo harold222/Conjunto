@@ -1,11 +1,3 @@
-<%-- 
-    Document   : Residente
-    Created on : 28-may-2019, 22:48:11
-    Author     : Harold Pedraza
-    Esta pagina sera la encargada de mostrar la vista al nivel 22 osea al nivel residente
-    el cual tendra opciones distintas en los distintos modulos.
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f" %>

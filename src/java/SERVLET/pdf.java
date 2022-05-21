@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author David
+ * @author Veronica Quinto
+ * cc: 1073528535
  */
 @WebServlet(name = "pdf", urlPatterns = {"/Admin/requerimientos/pdf"})
 public class pdf extends HttpServlet {

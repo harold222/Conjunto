@@ -1,9 +1,3 @@
-<%-- 
-    Document   : resultado
-    Created on : 27-may-2019, 14:54:26
-    Author     : HarolD
---%>
-
 <%@page import="clases.Email"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

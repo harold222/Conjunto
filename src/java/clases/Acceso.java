@@ -7,11 +7,11 @@ package clases;
 import java.sql.*;
 import java.util.LinkedList;
 
-/**
- * @author Harold Pedraza
- * date: 29/05/2019
- */
 
+/**
+ * @author Veronica Quinto
+ * cc: 1073528535
+ */
 public class Acceso {
     
     Database db = new Database();

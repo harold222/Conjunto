@@ -1,8 +1,8 @@
 package clases;
 
 /**
- * @author Harold Pedraza
- * date: 29/05/2018
+ * @author Veronica Quinto
+ * cc: 1073528535
  */
 
 public class FormularioEmpresadeAseo {

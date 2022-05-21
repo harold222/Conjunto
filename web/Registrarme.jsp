@@ -1,10 +1,3 @@
-<%-- 
-    Document   : Registrarme
-    Created on : 28-may-2019, 22:48:11
-    Author     : Harold Pedraza
-    Esta pagina sera la encargada de que pueda registrar usuarios de tipo residente ingresando en si sus datos.
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f" %>
 <%@ taglib uri="http://java.sun.com/jsf/html" prefix="h" %>

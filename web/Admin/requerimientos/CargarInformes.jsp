@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Pagina2
-    Created on : 19/12/2017, 04:00:50 PM
-    Author     : David
---%>
-
 <%@page import="VO.PdfVO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>

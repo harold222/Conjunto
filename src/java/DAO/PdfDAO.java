@@ -9,6 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * @author Veronica Quinto
+ * cc: 1073528535
+ */
+
 public class PdfDAO {
 
     Database db = new Database();

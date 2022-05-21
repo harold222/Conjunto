@@ -1,9 +1,3 @@
-<%-- 
-    Document   : admin
-    Created on : 18-may-2019, 15:27:44
-    Author     : HarolD
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
 
@@ -38,9 +32,7 @@
         <nav class="navbar navbar-dark bg-dark">
             
             <a style="color: white" class="nav-link dropdown-toggle" data-toggle="dropdown"></a>
-                
             
-
             <div class="dropdown">
                 <a style="color: white" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cerrar Sesion</a>
                 

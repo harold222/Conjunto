@@ -1,8 +1,3 @@
-<%-- 
-    Document   : EmpresaVigilancia
-    Created on : 20-may-2019, 22:37:50
-    Author     : HarolD
---%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.PreparedStatement"%>

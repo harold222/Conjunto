@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ActualizarEmpresaVigilancia
-    Created on : 21/05/2019, 02:31:14 PM
-    Author     : Harold
---%>
-
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.PreparedStatement"%>

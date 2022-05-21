@@ -1,11 +1,3 @@
-<%-- 
-    Document   : Actualizar perfil
-    Created on : 28-may-2019, 22:48:11
-    Author     : Harold Pedraza
-    Esta pagina sera la encargada de mostrarme en formato tabla los datos pertenecientes
-    a las noticias a publicarse en el conjunto.
---%>
-
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.PreparedStatement"%>

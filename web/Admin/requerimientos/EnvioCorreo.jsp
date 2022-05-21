@@ -1,9 +1,3 @@
-<%-- 
-    Document   : EnvioCorreo
-    Created on : 27-may-2019, 14:17:32
-    Author     : HarolD
---%>
-
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.PreparedStatement"%>

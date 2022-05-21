@@ -14,8 +14,8 @@ import javax.servlet.RequestDispatcher;
 import clases.Acceso;
 
 /**
- * @author Harold Pedraza
- * date 29/05/2019
+ * @author Veronica Quinto
+ * cc: 1073528535
  */
 
 public class SERVLOGIN extends HttpServlet {

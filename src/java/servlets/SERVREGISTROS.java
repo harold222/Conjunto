@@ -15,8 +15,8 @@ import javax.servlet.RequestDispatcher;
 import clases.Acceso;
 
 /**
- *
- * @author HarolD
+ * @author Veronica Quinto
+ * cc: 1073528535
  */
 public class SERVREGISTROS extends HttpServlet {
 

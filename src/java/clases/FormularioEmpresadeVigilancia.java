@@ -1,5 +1,10 @@
 package clases;
 
+/**
+ * @author Veronica Quinto
+ * cc: 1073528535
+ */
+
 public class FormularioEmpresadeVigilancia {
     
     int nitempresa;
